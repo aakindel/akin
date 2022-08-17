@@ -1,6 +1,6 @@
 import "../styles/globals.scss";
 import type { AppProps } from "next/app";
-import MainDSProvider from "../design_systems/mainds";
+import MainDSProvider from "@mainds";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
