@@ -6,7 +6,7 @@ export type ProjectType = {
   imgSrc: string;
   bgColor: string;
   noShadow?: boolean;
-  links: { type: "external" | "github"; target: string }[];
+  links: { type: "external" | "github"; href: string }[];
 };
 
 export const projects: ProjectType[] = [
@@ -21,7 +21,7 @@ export const projects: ProjectType[] = [
     links: [
       {
         type: "external",
-        target: "http://cmput401.ca/",
+        href: "http://cmput401.ca/",
       },
     ],
   },
@@ -36,12 +36,11 @@ export const projects: ProjectType[] = [
     links: [
       {
         type: "github",
-        target:
-          "https://github.com/aakindel/CMPUT404-project-socialdistribution",
+        href: "https://github.com/aakindel/CMPUT404-project-socialdistribution",
       },
       {
         type: "external",
-        target: "http://plurr.herokuapp.com/",
+        href: "http://plurr.herokuapp.com/",
       },
     ],
   },
@@ -57,12 +56,7 @@ export const projects: ProjectType[] = [
     links: [
       {
         type: "github",
-        target:
-          "https://github.com/aakindel/CMPUT404-project-socialdistribution",
-      },
-      {
-        type: "external",
-        target: "http://plurr.herokuapp.com/",
+        href: "https://github.com/aakindel/PocketBook",
       },
     ],
   },

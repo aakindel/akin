@@ -1,6 +1,11 @@
 import React from "react";
 import ProjectDisplayStyles from "./ProjectDisplay.module.scss";
 import { ProjectType } from "@/data/projects";
+import HeroIcons from "@/design_systems/mainds/components/icons/heroicons";
+import DSStyles from "@mainds/styles/mainds.module.scss";
+import SocialIcons from "@/design_systems/mainds/components/icons/social/simpleicons";
+import IconStyles from "@/design_systems/mainds/components/icons/icons.module.scss";
+import AppLink from "../AppLink";
 
 type ProjectDisplayProps = {
   project: ProjectType;
@@ -30,6 +35,37 @@ const ProjectDisplay = ({ project }: ProjectDisplayProps) => {
           <p className={ProjectDisplayStyles["project-summary"]}>
             {project.description}
           </p>
+          <div className={ProjectDisplayStyles["link-icon-list"]}>
+            {project.links.map((link) =>
+              link.type === "github" ? (
+                <AppLink
+                  href={link.href}
+                  className={DSStyles["link-text"]}
+                  style={{ height: "24px", width: "24px" }}
+                  openInNewTab
+                >
+                  <SocialIcons
+                    className={IconStyles["gray-hover"]}
+                    icon="github"
+                  />
+                </AppLink>
+              ) : (
+                <div className={IconStyles["hero-icon-padding-top"]}>
+                  <AppLink
+                    href={link.href}
+                    className={DSStyles["link-text"]}
+                    style={{ height: "24px", width: "24px" }}
+                    openInNewTab
+                  >
+                    <HeroIcons
+                      className={IconStyles["gray-hover"]}
+                      icon="external-link"
+                    />
+                  </AppLink>
+                </div>
+              )
+            )}
+          </div>
         </div>
       </div>
       <div className={ProjectDisplayStyles["right-container"]}>
