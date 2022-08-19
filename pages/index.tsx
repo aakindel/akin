@@ -81,10 +81,7 @@ const Home: NextPage = () => {
               style={{ height: "24px", width: "24px" }}
               openInNewTab
             >
-              <HeroIcons
-                className={IconStyles["light-gray-hover"]}
-                icon="mail"
-              />
+              <HeroIcons className={IconStyles["gray-hover"]} icon="mail" />
             </AppLink>
             <AppLink
               href="https://github.com/aakindel"
@@ -92,10 +89,7 @@ const Home: NextPage = () => {
               style={{ height: "24px", width: "24px" }}
               openInNewTab
             >
-              <SocialIcons
-                className={IconStyles["light-gray-hover"]}
-                icon="github"
-              />
+              <SocialIcons className={IconStyles["gray-hover"]} icon="github" />
             </AppLink>
 
             <AppLink
@@ -105,7 +99,7 @@ const Home: NextPage = () => {
               openInNewTab
             >
               <SocialIcons
-                className={IconStyles["light-gray-hover"]}
+                className={IconStyles["gray-hover"]}
                 icon="linkedin"
               />
             </AppLink>
