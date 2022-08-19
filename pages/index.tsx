@@ -1,10 +1,11 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import styles from "@page_styles/Home.module.scss";
 import DSStyles from "@mainds/styles/mainds.module.scss";
 import AppLink from "@/components/AppLink";
 import Container from "@/design_systems/mainds/components/Container";
+import ProjectDisplay from "@/components/ProjectDisplay";
+import { projects } from "@/data/projects";
 
 const Home: NextPage = () => {
   return (
@@ -45,6 +46,12 @@ const Home: NextPage = () => {
               </AppLink>
             </p>
           </div>
+          <p className={styles["section-header"]}>Projects</p>
+        </Container>
+        <Container type="screen-md">
+          {projects.map((project, index) => {
+            return <ProjectDisplay key={index} project={project} />;
+          })}
         </Container>
       </main>
     </div>

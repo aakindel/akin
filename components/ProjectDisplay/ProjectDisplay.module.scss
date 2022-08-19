@@ -1,0 +1,54 @@
+.display-container {
+  margin-bottom: 48px;
+  width: 100%;
+  min-height: 480px;
+  border-radius: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.left-container {
+  display: flex;
+  flex: 1;
+}
+
+.left-content {
+  padding-left: 88px;
+}
+
+.tools-list {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+  color: #525252;
+  margin-bottom: 16px;
+}
+
+.project-name {
+  font-size: 24px;
+  font-weight: 600;
+  color: #404040;
+  margin-bottom: 16px;
+}
+
+.project-summary {
+  color: #525252;
+  margin-bottom: 20px;
+}
+
+.right-container {
+  display: flex;
+  flex: 1;
+  position: relative;
+  height: 256px;
+}
+
+.project-image {
+  position: absolute;
+  top: 0px;
+  left: 40px;
+  width: 800px;
+  border-radius: 8px;
+}
