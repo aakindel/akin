@@ -6,6 +6,9 @@ import AppLogo from "@/components/AppLogo";
 import AppLink from "@/components/AppLink";
 import Container from "@/design_systems/mainds/components/Container";
 import ProjectDisplay from "@/components/ProjectDisplay";
+import HeroIcons from "@/design_systems/mainds/components/icons/heroicons";
+import SocialIcons from "@/design_systems/mainds/components/icons/social/simpleicons";
+import IconStyles from "@/design_systems/mainds/components/icons/icons.module.scss";
 import { projects } from "@/data/projects";
 
 const Home: NextPage = () => {
@@ -65,6 +68,45 @@ const Home: NextPage = () => {
           {projects.map((project, index) => {
             return <ProjectDisplay key={index} project={project} />;
           })}
+          <div style={{ marginBottom: "80px" }}></div>
+        </Container>
+        <Container type="screen-md">
+          <div className={styles["footer"]}>
+            <AppLink
+              href="mailto:a.akindele01@gmail.com"
+              className={DSStyles["link-text"]}
+              style={{ height: "24px", width: "24px" }}
+              openInNewTab
+            >
+              <HeroIcons
+                className={IconStyles["light-gray-hover"]}
+                icon="mail"
+              />
+            </AppLink>
+            <AppLink
+              href="https://github.com/aakindel"
+              className={DSStyles["link-text"]}
+              style={{ height: "24px", width: "24px" }}
+              openInNewTab
+            >
+              <SocialIcons
+                className={IconStyles["light-gray-hover"]}
+                icon="github"
+              />
+            </AppLink>
+
+            <AppLink
+              href="https://www.linkedin.com/in/aakindel/"
+              className={DSStyles["link-text"]}
+              style={{ height: "24px", width: "24px" }}
+              openInNewTab
+            >
+              <SocialIcons
+                className={IconStyles["light-gray-hover"]}
+                icon="linkedin"
+              />
+            </AppLink>
+          </div>
         </Container>
       </main>
     </div>
