@@ -33,37 +33,27 @@ const ProjectDisplay = ({ project }: ProjectDisplayProps) => {
             {project.description}
           </p>
           <div className={ProjectDisplayStyles["link-icon-list"]}>
-            {project.links.map((link, index) =>
-              link.type === "github" ? (
-                <AppLink
-                  key={index}
-                  href={link.href}
-                  className={DSStyles["link-text"]}
-                  style={{ height: "24px", width: "24px" }}
-                  openInNewTab
-                >
+            {project.links.map((link, index) => (
+              <AppLink
+                key={index}
+                href={link.href}
+                className={DSStyles["link-text"]}
+                style={{ height: "24px", width: "24px" }}
+                openInNewTab
+              >
+                {link.type === "github" ? (
                   <SocialIcons
                     className={IconStyles["gray-hover"]}
                     icon="github"
                   />
-                </AppLink>
-              ) : (
-                <div className={IconStyles["hero-icon-padding-top"]}>
-                  <AppLink
-                    key={index}
-                    href={link.href}
-                    className={DSStyles["link-text"]}
-                    style={{ height: "24px", width: "24px" }}
-                    openInNewTab
-                  >
-                    <HeroIcons
-                      className={IconStyles["gray-hover"]}
-                      icon="external-link"
-                    />
-                  </AppLink>
-                </div>
-              )
-            )}
+                ) : (
+                  <HeroIcons
+                    className={IconStyles["gray-hover"]}
+                    icon="external-link"
+                  />
+                )}
+              </AppLink>
+            ))}
           </div>
         </div>
       </div>
