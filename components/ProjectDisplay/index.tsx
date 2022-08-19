@@ -20,10 +20,7 @@ const ProjectDisplay = ({ project }: ProjectDisplayProps) => {
       }}
     >
       <div className={ProjectDisplayStyles["left-container"]}>
-        <div
-          className={ProjectDisplayStyles["left-content"]}
-          style={{ paddingLeft: "88px" }}
-        >
+        <div className={ProjectDisplayStyles["left-content"]}>
           <div className={ProjectDisplayStyles["tools-list"]}>
             {project.techStack.map((tech, index) => (
               <p key={index}>{tech}</p>
@@ -36,9 +33,10 @@ const ProjectDisplay = ({ project }: ProjectDisplayProps) => {
             {project.description}
           </p>
           <div className={ProjectDisplayStyles["link-icon-list"]}>
-            {project.links.map((link) =>
+            {project.links.map((link, index) =>
               link.type === "github" ? (
                 <AppLink
+                  key={index}
                   href={link.href}
                   className={DSStyles["link-text"]}
                   style={{ height: "24px", width: "24px" }}
@@ -52,6 +50,7 @@ const ProjectDisplay = ({ project }: ProjectDisplayProps) => {
               ) : (
                 <div className={IconStyles["hero-icon-padding-top"]}>
                   <AppLink
+                    key={index}
                     href={link.href}
                     className={DSStyles["link-text"]}
                     style={{ height: "24px", width: "24px" }}
