@@ -2,6 +2,8 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "@page_styles/Home.module.scss";
+import DSStyles from "@mainds/styles/mainds.module.scss";
+import AppLink from "@/components/AppLink";
 import Container from "@/design_systems/mainds/components/Container";
 
 const Home: NextPage = () => {
@@ -14,8 +16,35 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <Container type="screen-md">
-          <p>Default template removed.</p>
+        <Container type="screen-sm">
+          <div style={{ marginBottom: "64px" }}></div>
+          {/* <div style={{ marginBottom: "128px" }}></div> */}
+          <p className={styles["lead-paragraph"]}>Ayo Akindele</p>
+          <p className={styles["paragraph"]}>
+            Building interfaces to solve design problems. Working primarily with
+            React, Next.js, and Typescript. BSc Computing Science from the
+            University of Alberta.
+          </p>
+          <div className={styles["link-container"]}>
+            <p className={styles["paragraph"]}>
+              <AppLink
+                href="/resume.pdf"
+                className={DSStyles["link-text"]}
+                openInNewTab
+              >
+                Resume
+              </AppLink>
+            </p>
+            <p className={styles["paragraph"]}>
+              <AppLink
+                href="https://github.com/aakindel"
+                className={DSStyles["link-text"]}
+                openInNewTab
+              >
+                Github
+              </AppLink>
+            </p>
+          </div>
         </Container>
       </main>
     </div>
