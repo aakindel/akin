@@ -1,0 +1,118 @@
+@import "../../styles/breakpoints.module.scss";
+
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: $breakpoint-xs) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media screen and (min-width: $breakpoint-sm) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* ======================================================================= */
+/* Tightest */
+/* ======================================================================= */
+.tightest {
+  @extend .container;
+  max-width: 36rem;
+}
+
+/* ======================================================================= */
+/* Tighter */
+/* ======================================================================= */
+.tighter {
+  @extend .container;
+  max-width: 42rem;
+}
+
+/* ======================================================================= */
+/* Tight */
+/* ======================================================================= */
+.tight {
+  @extend .container;
+  max-width: 48rem;
+}
+
+/* ======================================================================= */
+/* Normal */
+/* ======================================================================= */
+.normal {
+  @extend .container;
+  max-width: 56rem;
+}
+
+/* ======================================================================= */
+/* Wide */
+/* ======================================================================= */
+.wide {
+  @extend .container;
+  max-width: 64rem;
+}
+
+/* ======================================================================= */
+/* Wider */
+/* ======================================================================= */
+.wider {
+  @extend .container;
+  max-width: 72rem;
+}
+
+/* ======================================================================= */
+/* Widest */
+/* ======================================================================= */
+.widest {
+  @extend .container;
+  max-width: 80rem;
+}
+
+/* ======================================================================= */
+/* Extras */
+/* ======================================================================= */
+.full {
+  @extend .container;
+  max-width: 100%;
+}
+
+.none {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+
+/* ======================================================================= */
+/* Breakpoint Containers */
+/* ======================================================================= */
+.screen-xs {
+  @extend .container;
+  max-width: $breakpoint-xs;
+}
+.screen-sm {
+  @extend .container;
+  max-width: $breakpoint-sm;
+}
+.screen-md {
+  @extend .container;
+  max-width: $breakpoint-md;
+}
+.screen-lg {
+  @extend .container;
+  max-width: $breakpoint-lg;
+}
+.screen-xl {
+  @extend .container;
+  max-width: $breakpoint-xl;
+}
