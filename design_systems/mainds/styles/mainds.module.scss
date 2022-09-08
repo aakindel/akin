@@ -11,11 +11,11 @@
   .link-text {
     display: inline-block;
     text-decoration: underline;
-    text-decoration-color: #999;
+    text-decoration-color: var(--mds-color-hover-emphasize-inactive);
     text-underline-offset: 4px;
   }
 
   .link-text:hover {
-    text-decoration-color: #777;
+    text-decoration-color: var(--mds-color-hover-emphasize-active);
   }
 }

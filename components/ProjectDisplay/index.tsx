@@ -1,11 +1,9 @@
 import React from "react";
 import ProjectDisplayStyles from "./ProjectDisplay.module.scss";
 import { ProjectType } from "@/data/projects";
-import HeroIcons from "@/design_systems/mainds/components/icons/heroicons";
 import DSStyles from "@mainds/styles/mainds.module.scss";
-import SocialIcons from "@/design_systems/mainds/components/icons/social/simpleicons";
-import IconStyles from "@/design_systems/mainds/components/icons/icons.module.scss";
 import AppLink from "../AppLink";
+import IconButton from "../IconButton";
 
 type ProjectDisplayProps = {
   project: ProjectType;
@@ -42,15 +40,11 @@ const ProjectDisplay = ({ project }: ProjectDisplayProps) => {
                 openInNewTab
               >
                 {link.type === "github" ? (
-                  <SocialIcons
-                    className={IconStyles["gray-hover"]}
-                    icon="github"
-                  />
+                  <IconButton icon="github" type="hover" />
                 ) : (
-                  <HeroIcons
-                    className={IconStyles["gray-hover"]}
-                    icon="external-link"
-                  />
+                  <div style={{ paddingTop: "1px" }}>
+                    <IconButton icon="external-link" type="hover" />
+                  </div>
                 )}
               </AppLink>
             ))}

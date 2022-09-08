@@ -6,10 +6,8 @@ import AppLogo from "@/components/AppLogo";
 import AppLink from "@/components/AppLink";
 import Container from "@/design_systems/mainds/components/Container";
 import ProjectDisplay from "@/components/ProjectDisplay";
-import HeroIcons from "@/design_systems/mainds/components/icons/heroicons";
-import SocialIcons from "@/design_systems/mainds/components/icons/social/simpleicons";
-import IconStyles from "@/design_systems/mainds/components/icons/icons.module.scss";
 import { projects } from "@/data/projects";
+import IconButton from "@/components/IconButton";
 
 const Home: NextPage = () => {
   return (
@@ -77,31 +75,24 @@ const Home: NextPage = () => {
           <div className={styles["footer"]}>
             <AppLink
               href="mailto:a.akindele01@gmail.com"
-              className={DSStyles["link-text"]}
               style={{ height: "24px", width: "24px" }}
               openInNewTab
             >
-              <HeroIcons className={IconStyles["gray-hover"]} icon="mail" />
+              <IconButton icon="mail" type="hover" />
             </AppLink>
             <AppLink
               href="https://github.com/aakindel"
-              className={DSStyles["link-text"]}
               style={{ height: "24px", width: "24px" }}
               openInNewTab
             >
-              <SocialIcons className={IconStyles["gray-hover"]} icon="github" />
+              <IconButton icon="github" type="hover" />
             </AppLink>
-
             <AppLink
               href="https://www.linkedin.com/in/aakindel/"
-              className={DSStyles["link-text"]}
               style={{ height: "24px", width: "24px" }}
               openInNewTab
             >
-              <SocialIcons
-                className={IconStyles["gray-hover"]}
-                icon="linkedin"
-              />
+              <IconButton icon="linkedin" type="hover" />
             </AppLink>
           </div>
         </Container>

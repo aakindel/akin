@@ -1,0 +1,105 @@
+:root,
+.main-ds {
+  /* Palette */
+  /* ======================================================================= */
+
+  // General
+  --mds-palette-white: #ffffff;
+  --mds-palette-black: #000000;
+
+  // Grays
+  --mds-palette-gray-50: #fafafa;
+  --mds-palette-gray-100: #f5f5f5;
+  --mds-palette-gray-200: #e5e5e5;
+  --mds-palette-gray-300: #d4d4d4;
+  --mds-palette-gray-400: #a3a3a3;
+  --mds-palette-gray-500: #737373;
+  --mds-palette-gray-600: #525252;
+  --mds-palette-gray-700: #404040;
+  --mds-palette-gray-800: #262626;
+  --mds-palette-gray-900: #171717;
+}
+
+:root.mds-light,
+.main-ds {
+  // App Logo
+  --mds-color-logo: var(--mds-palette-gray-700);
+
+  // Background
+  --mds-color-bg: var(--mds-palette-white);
+  --mds-color-bg-faint: var(--mds-palette-gray-100);
+  --mds-color-bg-muted: var(--mds-palette-gray-400);
+
+  // Text
+  --mds-color-text-distinct: var(--mds-palette-gray-900);
+  --mds-color-text-emphasized: var(--mds-palette-gray-800);
+  --mds-color-text-normal: var(--mds-palette-gray-700);
+  --mds-color-text-understated: var(--mds-palette-gray-600);
+  --mds-color-text-muted: var(--mds-palette-gray-500);
+  --mds-color-text-muted-dim: var(--mds-palette-gray-500);
+  --mds-color-text-faint: var(--mds-palette-gray-100);
+
+  // Border
+  --mds-color-border-dark: var(--mds-palette-gray-400);
+  --mds-color-border: var(--mds-palette-gray-300);
+  --mds-color-border-light: var(--mds-palette-gray-200);
+
+  // Marker
+  --mds-color-marker: var(--mds-palette-gray-500);
+
+  // Underline
+  --mds-color-underline: var(--mds-palette-gray-400);
+  --mds-color-underline-hover: var(--mds-palette-gray-500);
+
+  // State
+  --mds-color-hover-emphasize-inactive: var(--mds-palette-gray-500);
+  --mds-color-hover-emphasize-active: var(--mds-palette-gray-600);
+}
+
+:root.mds-dark {
+  // App Logo
+  --mds-color-logo: var(--mds-palette-gray-500);
+
+  // Background
+  --mds-color-bg: var(--mds-palette-gray-900);
+  --mds-color-bg-faint: var(--mds-palette-gray-800);
+  --mds-color-bg-muted: var(--mds-palette-gray-500);
+
+  // Text
+  --mds-color-text-distinct: var(--mds-palette-gray-100);
+  --mds-color-text-emphasized: var(--mds-palette-gray-200);
+  --mds-color-text-normal: var(--mds-palette-gray-300);
+  --mds-color-text-understated: var(--mds-palette-gray-400);
+  --mds-color-text-muted: var(--mds-palette-gray-400);
+  --mds-color-text-muted-dim: var(--mds-palette-gray-500);
+  --mds-color-text-faint: var(--mds-palette-gray-900);
+
+  // Border
+  --mds-color-border-dark: var(--mds-palette-gray-600);
+  --mds-color-border: var(--mds-palette-gray-700);
+  --mds-color-border-light: var(--mds-palette-gray-800);
+
+  // Marker
+  --mds-color-marker: var(--mds-palette-gray-500);
+
+  // Underline
+  --mds-color-underline: var(--mds-palette-gray-600);
+  --mds-color-underline-hover: var(--mds-palette-gray-500);
+
+  // State
+  --mds-color-hover-emphasize-inactive: var(--mds-palette-gray-500);
+  --mds-color-hover-emphasize-active: var(--mds-palette-gray-400);
+}
+
+:root.mds-light,
+:root.mds-dark {
+  background-color: var(--mds-color-bg);
+}
+
+:root.mds-light {
+  --mds-image-brightness: 1;
+}
+
+:root.mds-dark {
+  --mds-image-brightness: 0.8;
+}

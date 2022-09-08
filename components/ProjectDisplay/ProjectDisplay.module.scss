@@ -26,7 +26,7 @@
   column-gap: 16px;
   row-gap: 2px;
   font-size: 14px;
-  color: #525252;
+  color: var(--mds-color-text-muted-dim);
   margin-bottom: 16px;
 }
 
@@ -34,12 +34,12 @@
   font-size: 24px;
   line-height: 1.3;
   font-weight: 600;
-  color: #404040;
+  color: var(--mds-color-text-normal);
   margin-bottom: 16px;
 }
 
 .project-summary {
-  color: #525252;
+  color: var(--mds-color-text-understated);
   margin-bottom: 20px;
 }
 
@@ -69,6 +69,7 @@
   left: 30px;
   width: 800px;
   border-radius: 8px;
+  filter: brightness(var(--mds-image-brightness));
 }
 
 @media screen and (min-width: 640px) {

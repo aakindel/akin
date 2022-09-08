@@ -3,8 +3,8 @@
 }
 
 .path {
-  fill: #444;
-  stroke: #444;
+  fill: var(--mds-color-logo);
+  stroke: var(--mds-color-logo);
   stroke-width: 0.950301;
   stroke-miterlimit: 4;
   stroke-dasharray: none;
@@ -14,8 +14,8 @@
 }
 
 .ellipse {
-  fill: #444;
-  stroke: #444;
+  fill: var(--mds-color-logo);
+  stroke: var(--mds-color-logo);
   stroke-width: 0.99999;
   stroke-miterlimit: 4;
   stroke-dasharray: none;
