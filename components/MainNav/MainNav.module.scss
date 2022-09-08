@@ -1,0 +1,13 @@
+.main-nav-scope {
+  --logo-color: var(--mds-color-text-emphasized);
+  --logo-font-size: var(--mds-font-size-400);
+  --logo-font-weight: var(--mds-font-weight-normal);
+}
+
+.main-nav-scope {
+  .logo-text {
+    color: var(--logo-color);
+    font-size: var(--logo-font-size);
+    font-weight: var(--logo-font-weight);
+  }
+}

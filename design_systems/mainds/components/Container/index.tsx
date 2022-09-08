@@ -1,22 +1,9 @@
 import React from "react";
 import ContainerStyles from "./Container.module.scss";
+import { ContainerType } from "./types";
 
 export type ContainerProps = {
-  type?:
-    | "none"
-    | "tightest"
-    | "tighter"
-    | "tight"
-    | "normal"
-    | "wide"
-    | "wider"
-    | "widest"
-    | "full"
-    | "screen-xs"
-    | "screen-sm"
-    | "screen-md"
-    | "screen-lg"
-    | "screen-xl";
+  type?: ContainerType;
   children?: React.ReactNode;
 };
 

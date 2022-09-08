@@ -1,0 +1,15 @@
+export type ContainerType =
+  | "none"
+  | "tightest"
+  | "tighter"
+  | "tight"
+  | "normal"
+  | "wide"
+  | "wider"
+  | "widest"
+  | "full"
+  | "screen-xs"
+  | "screen-sm"
+  | "screen-md"
+  | "screen-lg"
+  | "screen-xl";

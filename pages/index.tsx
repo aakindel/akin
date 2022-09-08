@@ -2,12 +2,12 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "@page_styles/Home.module.scss";
 import DSStyles from "@mainds/styles/mainds.module.scss";
-import AppLogo from "@/components/AppLogo";
 import AppLink from "@/components/AppLink";
 import Container from "@/design_systems/mainds/components/Container";
 import ProjectDisplay from "@/components/ProjectDisplay";
 import { projects } from "@/data/projects";
 import IconButton from "@/components/IconButton";
+import MainNav from "@/components/MainNav";
 
 const Home: NextPage = () => {
   return (
@@ -22,19 +22,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <Container type="screen-md">
-          <div
-            style={{
-              height: "60px",
-              display: "flex",
-              alignItems: "center",
-            }}
-          >
-            <AppLink href="/" style={{ height: "24px" }}>
-              <AppLogo />
-            </AppLink>
-          </div>
-        </Container>
+        <MainNav />
         <Container type="screen-sm">
           <div style={{ marginBottom: "64px" }}></div>
           <p className={styles["lead-paragraph"]}>Ayo Akindele</p>

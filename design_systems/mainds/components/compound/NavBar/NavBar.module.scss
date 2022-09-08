@@ -1,0 +1,42 @@
+.nav-bar-scope {
+  --nav-bar-border-color: var(--mds-color-border);
+  --nav-bar-border-thickness: 1px;
+  --nav-bar-bg-color: var(--mds-color-bg);
+  --nav-bar-height: 60px;
+  --nav-bar-item-gap: 24px;
+}
+
+.nav-bar-scope {
+  .nav-bar-container {
+    display: block;
+  }
+
+  .bottom-border {
+    border-bottom: var(--nav-bar-border-thickness) solid
+      var(--nav-bar-border-color);
+  }
+
+  .nav-bar {
+    display: flex;
+    height: var(--nav-bar-height);
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--nav-bar-bg-color);
+  }
+
+  .nav-bar-logo {
+    display: block;
+  }
+
+  .nav-bar-item-group {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: var(--nav-bar-item-gap);
+  }
+
+  .nav-bar-item {
+    display: block;
+  }
+}
