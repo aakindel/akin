@@ -1,4 +1,20 @@
 .icon-button-scope {
+  --icon-button-padding: 6px;
+  --icon-button-transition-speed: 0.1s;
+  --icon-button-border-radius: 4px;
+
+  .icon-button.minimal {
+    --icon-button-color: var(--mds-color-text-muted);
+    --icon-button-hover-bg-color: var(--mds-color-bg-faint);
+  }
+
+  .icon-button.hover {
+    --icon-button-color: var(--mds-color-hover-emphasize-inactive);
+    --icon-button-hover-color: var(--mds-color-hover-emphasize-active);
+  }
+}
+
+.icon-button-scope {
   .icon-button {
     cursor: pointer;
     display: flex;
@@ -6,11 +22,29 @@
     justify-content: center;
   }
 
+  .icon-button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .icon-button.minimal {
+    color: var(--icon-button-color);
+    padding: var(--icon-button-padding);
+    transition: var(--icon-button-transition-speed);
+    border-radius: var(--icon-button-border-radius);
+  }
+
+  .icon-button.minimal:hover {
+    background-color: var(--icon-button-hover-bg-color);
+    transition: var(--icon-button-transition-speed);
+  }
+
   .icon-button.hover {
-    color: var(--mds-color-hover-emphasize-inactive);
+    color: var(--icon-button-color);
   }
 
   .icon-button.hover:hover {
-    color: var(--mds-color-hover-emphasize-active);
+    color: var(--icon-button-hover-color);
   }
 }
