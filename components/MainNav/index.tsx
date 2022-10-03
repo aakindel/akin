@@ -11,7 +11,7 @@ const MainNav = ({ ...NavBarProps }: MainNavProps) => {
     ? NavBarProps
     : {
         ...NavBarProps,
-        innerContainerType: "screen-md",
+        innerContainerType: "screen-lg",
       };
 
   return (

@@ -10,6 +10,22 @@ export const MDXAppLink = (props: AppLinkProps) => {
   );
 };
 
+export const MDXFeaturedImage = ({
+  src,
+  alt,
+}: {
+  src: string;
+  alt: string;
+}) => {
+  return (
+    <div className={MDXStyles["featured-img-container"]}>
+      <picture>
+        <img className={MDXStyles["featured-img"]} src={src} alt={alt} />
+      </picture>
+    </div>
+  );
+};
+
 const MDXHTMLElements = {
   h1: (props: HTMLAttributes<HTMLHeadingElement>) => (
     <h1 className={MDXStyles["prose-h1"]} {...props} />
