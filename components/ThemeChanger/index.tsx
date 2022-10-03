@@ -1,26 +1,22 @@
 import useHasWindow from "@/hooks/useHasWindow";
-import { useTheme } from "@/lib/next-themes-lib";
+import { useTheme } from "next-themes";
 import React from "react";
 import IconButton from "../IconButton";
 
 const ThemeChanger = () => {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
   const hasWindow = useHasWindow();
 
   const changeTheme = () =>
     setTheme(
-      theme === "system"
-        ? "mds-dark"
-        : theme === "mds-light"
+      resolvedTheme === "light" || resolvedTheme === "mds-light"
         ? "mds-dark"
         : "mds-light"
     );
 
   return hasWindow ? (
     <React.Fragment>
-      {theme === "system" ? (
-        <IconButton icon="sun" onClick={changeTheme} />
-      ) : theme === "mds-light" ? (
+      {resolvedTheme === "light" || resolvedTheme === "mds-light" ? (
         <IconButton icon="sun" onClick={changeTheme} />
       ) : (
         <IconButton icon="moon" onClick={changeTheme} />

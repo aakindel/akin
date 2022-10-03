@@ -8,18 +8,11 @@ import { Dispatch, SetStateAction, useState } from "react";
 // https://usehooks-ts.com/react-hook/use-local-storage
 export default function useLocalStorageState<T>(
   storageKey: string,
-  initialValue: T,
-  noParse = false
+  initialValue: T
 ): [T, Dispatch<SetStateAction<T>>] {
-  // if (typeof window !== "undefined") {
-  //   localStorage.setItem(storageKey, "undefined");
-  // }
-  const retrievedValue = readLocalStorageValue(storageKey, noParse);
-  // console.log(retrievedValue);
+  const retrievedValue = readLocalStorageValue(storageKey);
 
   const [storedValue, setStoredValue] = useState<T>(
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
     (retrievedValue as unknown as T) || (initialValue as T)
   );
 
@@ -30,7 +23,7 @@ export default function useLocalStorageState<T>(
     const newValue = value instanceof Function ? value(storedValue) : value;
 
     // Save to local storage
-    setLocalStorageValue(storageKey, newValue as unknown as string, noParse);
+    setLocalStorageValue(storageKey, newValue as unknown as string);
     // console.log("saving", storageKey);
 
     // Save state

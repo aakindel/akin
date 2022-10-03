@@ -9,7 +9,7 @@ import IconButtonStyles from "./IconButton.module.scss";
 
 type IconButtonProps = {
   type?: "minimal" | "hover";
-  icon: "external-link" | "github" | "linkedin" | "mail" | "moon" | "sun";
+  icon: HeroIconNames | SocialIconNames;
   onClick?: React.MouseEventHandler<HTMLElement>;
 };
 
