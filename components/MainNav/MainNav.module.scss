@@ -2,6 +2,14 @@
   --logo-color: var(--mds-color-text-emphasized);
   --logo-font-size: var(--mds-font-size-400);
   --logo-font-weight: var(--mds-font-weight-normal);
+
+  --link-text-color: var(--mds-color-text-muted);
+  --link-text-font-size: 14px;
+  --link-text-weight: 500;
+  --link-text-hover-bg-color: var(--mds-color-bg-faint);
+  --link-text-padding: 6px 8px;
+  --link-text-transition-speed: 0.1s;
+  --link-text-border-radius: 4px;
 }
 
 .main-nav-scope {
@@ -9,5 +17,19 @@
     color: var(--logo-color);
     font-size: var(--logo-font-size);
     font-weight: var(--logo-font-weight);
+  }
+
+  .link-text {
+    color: var(--link-text-color);
+    font-size: var(--link-text-font-size);
+    padding: var(--link-text-padding);
+    transition: var(--link-text-transition-speed);
+    font-weight: var(--link-text-font-weight);
+    border-radius: var(--link-text-border-radius);
+  }
+
+  .link-text:hover {
+    background-color: var(--link-text-hover-bg-color);
+    transition: var(--link-text-transition-speed);
   }
 }

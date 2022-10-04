@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-type AppLinkProps = {
+export type AppLinkProps = {
   href?: string;
   openInNewTab?: boolean;
   className?: string;

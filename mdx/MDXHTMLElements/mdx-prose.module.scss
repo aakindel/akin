@@ -1,0 +1,312 @@
+.prose-scope {
+  --code-bg-color: var(--mds-color-bg-faint);
+  --code-text-color: var(--mds-color-text-normal);
+  --link-underline-color: var(--mds-color-underline);
+  --link-underline-hover-color: var(--mds-color-underline-hover);
+  --heading-color: var(--mds-color-text-emphasized);
+  --body-color: var(--mds-color-text-normal);
+  --figcaption-color: var(--mds-color-text-muted);
+  --blockquote-border-color: var(--mds-color-border-light);
+  --hr-color: var(--mds-color-border-light);
+  --marker-color: var(--mds-color-border-light);
+  --meta-color: var(--mds-color-text-muted-dim);
+}
+
+.prose-scope {
+  /* ======================================================================= */
+  /* Prose Modifiers */
+  /* ======================================================================= */
+
+  .prose-code {
+    font-size: 85%;
+    font-style: normal;
+    line-height: inherit;
+    font-family: "SF Mono Regular";
+    display: inline-block;
+    background-color: var(--code-bg-color);
+    padding: 0.3em 0.4em;
+    border-radius: 4px;
+    color: var(--code-text-color);
+    font-weight: inherit;
+  }
+
+  .prose-strong {
+    font-weight: 700;
+  }
+
+  .prose-link {
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: underline;
+    text-decoration-color: var(--link-underline-color);
+    text-underline-offset: 5px;
+  }
+
+  .prose-link:hover {
+    text-decoration-color: var(--link-underline-hover-color);
+  }
+
+  /* ======================================================================= */
+  /* Prose Foundation */
+  /* ======================================================================= */
+
+  /* Title (Heading 1)
+  ========================================================================== */
+
+  .prose-h1 {
+    font-size: 20px;
+    line-height: 1.9;
+    font-weight: 500;
+    color: var(--heading-color);
+    letter-spacing: 0px;
+    margin-bottom: 18px;
+  }
+
+  .prose-h1 {
+    .prose-code {
+      font-family: "SF Mono Semibold";
+      padding: 0.03em 0.4em;
+      line-height: 1.9;
+    }
+  }
+
+  /* Heading 2
+  ========================================================================== */
+
+  .prose-h2 {
+    font-size: 18px;
+    line-height: 1.9;
+    font-weight: 500;
+    color: var(--heading-color);
+    letter-spacing: 0px;
+    margin-top: 40px;
+    margin-bottom: 18px;
+  }
+
+  .prose-h2 {
+    .prose-code {
+      font-family: "SF Mono Semibold";
+      padding: 0.03em 0.4em;
+      line-height: 1.9;
+    }
+  }
+
+  /* Heading 3
+  ========================================================================== */
+
+  .prose-h3 {
+    font-size: 17px;
+    line-height: 1.9;
+    font-weight: 500;
+    color: var(--heading-color);
+    letter-spacing: 0px;
+    margin-top: 32px;
+    margin-bottom: 18px;
+  }
+
+  .prose-h3 {
+    .prose-code {
+      font-family: "SF Mono Semibold";
+      padding: 0.03em 0.4em;
+      line-height: 1.9;
+    }
+  }
+
+  /* Heading 4
+  ========================================================================== */
+
+  .prose-h4 {
+    font-size: 16px;
+    line-height: 1.9;
+    font-weight: 500;
+    color: var(--heading-color);
+    letter-spacing: 0px;
+    margin-top: 28px;
+    margin-bottom: 18px;
+  }
+
+  .prose-h4 {
+    .prose-code {
+      font-family: "SF Mono Semibold";
+      padding: 0.03em 0.4em;
+      line-height: 1.9;
+    }
+  }
+
+  /* Body
+  ========================================================================== */
+
+  .prose-body {
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 400;
+    color: var(--body-color);
+    letter-spacing: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .prose-body {
+    .prose-code {
+      font-family: "SF Mono Medium";
+      padding: 0.04em 0.4em;
+    }
+  }
+
+  /* Meta
+  ========================================================================== */
+
+  .prose-meta {
+    font-size: 14px;
+    line-height: 1.8;
+    font-weight: 400;
+    color: var(--meta-color);
+    letter-spacing: 0px;
+    margin-top: 0px;
+    margin-bottom: 8px;
+  }
+
+  .prose-meta {
+    .prose-code {
+      font-family: "SF Mono Medium";
+      padding: 0.04em 0.4em;
+    }
+  }
+
+  /* Blockquote
+  ========================================================================== */
+
+  .prose-blockquote {
+    margin-top: 1.6em;
+    margin-bottom: 1.6em;
+    padding-left: 1em;
+  }
+  .prose-blockquote {
+    font-weight: 500;
+    color: var(--body-color);
+    border-left-style: solid;
+    border-left-width: 0.25rem;
+    border-left-color: var(--blockquote-border-color);
+  }
+
+  /* Horizontal Rule
+  ========================================================================== */
+
+  .prose-hr {
+    border-color: transparent;
+    border-top: 1px solid var(--hr-color);
+  }
+  .prose-hr {
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+  .prose-hr.hr-lg {
+    margin-top: 5em;
+    margin-bottom: 5em;
+  }
+  .prose-hr + * {
+    margin-top: 0;
+  }
+
+  /* Image
+  ========================================================================== */
+  .prose-img {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    max-width: 100%;
+    border-radius: 8px;
+    height: auto;
+  }
+
+  .featured-img {
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    filter: brightness(var(--mds-image-brightness));
+  }
+
+  .featured-img-container {
+    overflow: hidden;
+    position: relative;
+    margin: 0px auto 48px;
+  }
+
+  /* Video
+  ========================================================================== */
+  .prose-video {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  /* Figure
+  ========================================================================== */
+
+  .prose-figure {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  .prose-figure > * {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .prose-figcaption {
+    text-align: right;
+    font-size: 0.875em;
+    line-height: 1.4;
+    margin-top: 0.4em;
+    color: var(--figcaption-color);
+  }
+
+  /* ======================================================================= */
+  /* Prose List */
+  /* ======================================================================= */
+
+  /* Ordered List
+  ========================================================================== */
+
+  .prose-ol {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--body-color);
+    list-style: decimal;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 1.625em;
+  }
+
+  /* Unordered List
+  ========================================================================== */
+
+  .prose-ul {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--body-color);
+    list-style: disc;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 1.625em;
+  }
+
+  /* List Item
+  ========================================================================== */
+
+  .prose-li {
+    padding-left: 0.375em;
+    margin-top: 6px;
+    margin-bottom: 6px;
+  }
+
+  .prose-li {
+    .prose-code {
+      font-family: "SF Mono Medium";
+      padding: 0.04em 0.4em;
+    }
+  }
+
+  .prose-li::marker {
+    color: var(--marker-color);
+  }
+}
