@@ -47,4 +47,8 @@
   .icon-button.hover:hover {
     color: var(--icon-button-hover-color);
   }
+
+  .icon-button.inherit {
+    color: inherit;
+  }
 }

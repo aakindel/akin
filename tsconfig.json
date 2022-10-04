@@ -6,8 +6,7 @@
       "@components/*": ["components/*"],
       "@design_systems/*": ["design_systems/*"],
       "@mainds": ["design_systems/mainds/"],
-      "@mainds/*": ["design_systems/mainds/*"],
-      "@page_styles/*": ["styles/pages/*"]
+      "@mainds/*": ["design_systems/mainds/*"]
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],

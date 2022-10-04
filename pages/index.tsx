@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import styles from "@page_styles/Home.module.scss";
+import styles from "styles/Home.module.scss";
 import DSStyles from "@mainds/styles/mainds.module.scss";
 import AppLink from "@/components/AppLink";
 import Container from "@/design_systems/mainds/components/Container";
@@ -23,7 +23,7 @@ const Home: NextPage = () => {
 
       <main>
         <MainNav />
-        <Container type="screen-sm">
+        <Container type="tighter">
           <div style={{ marginBottom: "64px" }}></div>
           <p className={styles["lead-paragraph"]}>Ayo Akindele</p>
           <p className={styles["paragraph"]}>

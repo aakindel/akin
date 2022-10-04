@@ -23,6 +23,11 @@ const MainNav = ({ ...NavBarProps }: MainNavProps) => {
       </NavBar.Logo>
       <NavBar.ItemGroup>
         <NavBar.Item>
+          <AppLink className={MainNavStyles["link-text"]} href="/mini-projects">
+            Mini Projects
+          </AppLink>
+        </NavBar.Item>
+        <NavBar.Item>
           <ThemeChanger />
         </NavBar.Item>
       </NavBar.ItemGroup>

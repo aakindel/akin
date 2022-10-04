@@ -8,7 +8,7 @@ import SocialIcons, {
 import IconButtonStyles from "./IconButton.module.scss";
 
 type IconButtonProps = {
-  type?: "minimal" | "hover";
+  type?: "minimal" | "hover" | "inherit";
   icon: HeroIconNames | SocialIconNames;
   onClick?: React.MouseEventHandler<HTMLElement>;
 };
