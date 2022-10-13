@@ -96,7 +96,7 @@ export default function MiniProjectsPageLayout({
                 <div className={PageLayoutStyles["post-header"]}>
                   <div>
                     <h1
-                      className={`${MDXStyles["prose-h1"]}`}
+                      className={`${MDXStyles["prose-h1"]} ${MDXStyles["project-title"]}`}
                       style={{ marginTop: "0px", marginBottom: "0px" }}
                     >
                       {frontMatter.name}

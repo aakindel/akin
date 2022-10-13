@@ -1,0 +1,49 @@
+---
+name: "CodeBlock Component"
+isPublished: true
+publishedOn: null
+updatedOn: null
+tags: ["site"]
+techStack: ["React", "Next.js", "TypeScript", "next-mdx-remote"]
+links:
+  [
+    { type: "info", href: "" },
+    { type: "github", href: "https://github.com/aakindel/codeblock-component" },
+    { type: "external", href: "https://codeblock-component.vercel.app/" },
+  ]
+---
+
+<div style={{ margin: "0px auto 40px" }}>
+  <DefaultFPLayout
+    childURL={"https://codeblock-component.vercel.app/demo"}
+    framePxHeight={388}
+  >
+    {({ iframeRef, iframeHeight }) => {
+      return (
+        <iframe
+          frameBorder="0"
+          height={iframeHeight}
+          ref={iframeRef}
+          src={"https://codeblock-component.vercel.app/demo"}
+          style={{
+            width: "100%",
+            overflow: "hidden",
+            border: "1px solid #ccc",
+            borderRadius: "8px",
+          }}
+        ></iframe>
+      );
+    }}
+  </DefaultFPLayout>
+</div>
+
+Built with React, Next.js and TypeScript and `prism-react-renderer`.
+
+The CodeBlock component is an easy to use component for displaying
+syntax highlighted code blocks.
+
+The component's style as well as the `props` for the component
+are inspired by CodeSandbox's <MDXAppLink href="https://github.com/codesandbox/sandpack" openInNewTab>
+Sandpack React component</MDXAppLink>.
+
+The site is deployed with Vercel.

@@ -88,10 +88,14 @@ export const MiniProjectListItem = ({
 }: {
   project: MiniProjectsFrontmatter;
 }) => {
+  const miniProjectItemHref = `/mini-projects/${project.name
+    .toLowerCase()
+    .replace(" ", "-")}`;
+
   if (!project.links.filter((project) => project.type === "info").length) {
     project.links.unshift({
       type: "info",
-      href: `/mini-projects/${project.name.toLowerCase()}`,
+      href: miniProjectItemHref,
     });
   }
   return (
@@ -99,7 +103,7 @@ export const MiniProjectListItem = ({
       <li className={MiniProjectListStyles["list-item"]}>
         <AppLink
           className={MiniProjectListStyles["overlay-link"]}
-          href={`/mini-projects/${project.name.toLowerCase()}`}
+          href={miniProjectItemHref}
         ></AppLink>
         <div className={MiniProjectListStyles["content-container"]}>
           <div className={MiniProjectListStyles["project-name-container"]}>

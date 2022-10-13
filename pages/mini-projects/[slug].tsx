@@ -12,6 +12,7 @@ import MDXHTMLElements, {
 import { ParsedUrlQuery } from "querystring";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { MiniProjectsFrontmatter } from "@/mdx/paths/mini-projects/types";
+import { DefaultFPLayout } from "@/design_systems/mainds/layouts/FrameLayout";
 import Head from "next/head";
 
 export default function MiniProjectsPost({
@@ -37,6 +38,7 @@ export default function MiniProjectsPost({
             ...MDXHTMLElements,
             MDXAppLink,
             MDXFeaturedImage,
+            DefaultFPLayout,
           }}
         />
       </MiniProjectPageLayout>

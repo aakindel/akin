@@ -33,16 +33,14 @@ const MiniProjects = ({
           </div>
 
           <div>
-            {frontMatterList
-              .filter(
-                // ignore unpublished files
-                (post: MiniProjectsFrontmatter) => post.isPublished
-              )
-              .map((post: MiniProjectsFrontmatter, index: number) => (
-                <React.Fragment key={index}>
-                  {getMiniProjectsByTag(frontMatterList)}
-                </React.Fragment>
-              ))}
+            {getMiniProjectsByTag(
+              frontMatterList
+                .filter(
+                  // ignore unpublished files
+                  (post: MiniProjectsFrontmatter) => post.isPublished
+                )
+                .reverse()
+            )}
           </div>
         </div>
       </Container>
