@@ -37,13 +37,49 @@ links:
   </DefaultFPLayout>
 </div>
 
-Built with React, Next.js and TypeScript and `prism-react-renderer`.
+Built with React, Next.js, TypeScript and `prism-react-renderer`.
 
-The CodeBlock component is an easy to use component for displaying
-syntax highlighted code blocks.
+The CodeBlock component is a wrapper component for `prism-react-renderer`
+that makes it easier to display syntax highlighted code blocks out-of-the-box.
 
-The component's style as well as the `props` for the component
-are inspired by CodeSandbox's <MDXAppLink href="https://github.com/codesandbox/sandpack" openInNewTab>
+To display a syntax highlighted code block without line numbers
+using `prism-react-renderer`, you'd need to write something
+like <MDXAppLink href="https://github.com/FormidableLabs/prism-react-renderer#usage" openInNewTab>
+the following</MDXAppLink>:
+
+<CodeBlock
+  code={`<Highlight {...defaultProps} code={exampleCode} language="jsx">
+  {({ className, style, tokens, getLineProps, getTokenProps }) => (
+    <pre className={className} style={style}>
+      {tokens.map((line, i) => (
+        <div {...getLineProps({ line, key: i })}>
+          {line.map((token, key) => (
+            <span {...getTokenProps({ token, key })} />
+          ))}
+        </div>
+      ))}
+    </pre>
+  )}
+</Highlight>`}
+  showLineNumbers={false}
+  options={{ pxHeight: 308 }}
+/>
+
+whereas with the CodeBlock component, you'd only need to write:
+
+<CodeBlock
+  code={`<CodeBlock
+  code={exampleCode}
+  showLineNumbers={false}
+/>`}
+  showLineNumbers={false}
+  options={{ pxHeight: 128 }}
+/>
+
+Additionally, the CodeBlock component provides support for displaying
+code files in different tabs, line wrapping, and more. The component's
+style as well as the `props` for the component are inspired by
+CodeSandbox's <MDXAppLink href="https://github.com/codesandbox/sandpack" openInNewTab>
 Sandpack React component</MDXAppLink>.
 
 The site is deployed with Vercel.
