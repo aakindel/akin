@@ -1,0 +1,54 @@
+.tabs {
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-list {
+  display: flex;
+  align-items: center;
+}
+
+.tab {
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.tab-panel {
+  overflow: hidden;
+  height: 100%;
+}
+
+.codeblock-container {
+  overflow: hidden;
+}
+
+.pre {
+  display: flex;
+  height: 100%;
+}
+
+.block-line-numbers-list {
+  position: sticky;
+  left: 0;
+}
+
+.block-line-number-container {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  user-select: none;
+}
+
+.block-line-number {
+  font-family: SF Mono Regular;
+  font-size: 0.6em;
+  padding-top: 1px;
+  opacity: 0.5;
+  min-width: 10px;
+}
+
+.code {
+  display: block;
+  font-family: SF Mono Regular;
+  width: max-content;
+}
