@@ -76,43 +76,32 @@ export const DefaultFPLayout = ({
     [childURL]
   );
 
-  const maxTimesToSendMsg = 50;
-  const sendMsgInterval = 25;
-
-  useEffect(() => {
-    // https://stackoverflow.com/a/42683222 : call setTimeout X number of times
-    for (let index = 0; index < maxTimesToSendMsg; index++) {
-      setTimeout(function () {
-        if (
-          iframeRef.current?.contentWindow &&
-          shouldSendHeightMsg &&
-          framePxHeight
-        ) {
-          postMessageToChild({
-            type: "px-height-from-parent",
-            value: framePxHeight,
-          });
-          setShouldSendHeightMsg(false);
-        }
-      }, index * sendMsgInterval);
-
-      // exit loop if message is sent
-      if (!shouldSendHeightMsg) break;
-    }
-  }, [
-    shouldSendHeightMsg,
-    setShouldSendHeightMsg,
-    framePxHeight,
-    postMessageToChild,
-    iframeRef.current?.contentWindow,
-  ]);
-
   useEffect(() => {
     const handler = (event: MessageEvent) => {
       // skip messages from unexpected origins
       if (event.origin !== getOriginFromURL(childURL)) {
         return;
       }
+
+      /* HANDLE POSTING MESSAGES TO FRAME CHILD */
+      /* sending messages in the handler for the message listener 
+         ensures that messages will be sent after the child iframe 
+         is loaded, which avoids the postMessage error due to an unloaded
+         iframe from appearing (https://stackoverflow.com/a/22379990) */
+
+      if (
+        iframeRef.current?.contentWindow &&
+        shouldSendHeightMsg &&
+        framePxHeight
+      ) {
+        postMessageToChild({
+          type: "px-height-from-parent",
+          value: framePxHeight,
+        });
+        setShouldSendHeightMsg(false);
+      }
+
+      /* HANDLE RECEIVING MESSAGES FROM FRAME CHILD */
 
       const message: MessageFromChild = event.data;
 
@@ -123,7 +112,7 @@ export const DefaultFPLayout = ({
 
     window.addEventListener("message", handler);
     return () => window.removeEventListener("message", handler);
-  }, [childURL, framePxHeight]);
+  }, [childURL, framePxHeight, postMessageToChild, shouldSendHeightMsg]);
 
   return (
     <React.Fragment>
@@ -147,7 +136,10 @@ export const DefaultFCLayout = ({
 
   const postMessageToParent = useCallback(
     (message: MessageFromChild) => {
-      window.parent.postMessage(message, parentURL);
+      // https://stackoverflow.com/a/47305856 : avoid postMessage error
+      if (window.location !== window.parent.location) {
+        window.parent.postMessage(message, parentURL);
+      }
     },
     [parentURL]
   );
