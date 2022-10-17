@@ -1,0 +1,30 @@
+---
+title: "Next.js Responsive Image Snippet"
+type: "snippet"
+isPublished: false
+publishedOn: null
+updatedOn: null
+tags: ["snippet"]
+---
+
+<CodeBlock
+  code={`<Image
+    objectFit="cover"
+    alt={article.title}
+    src={\`/uploads/\${article.upload.path}\`}
+    width={ui.sizes.thumb.w.sm}
+    height={ui.sizes.thumb.h.sm}
+    layout="responsive"
+    loader={staticImageLoader}
+/>`}
+  showLineNumbers={false}
+  options={{ pxHeight: 228 }}
+/>
+
+<MDXAppLink
+  href="https://www.reddit.com/r/nextjs/comments/vhujbf/comment/idbql9r/"
+  openInNewTab
+>
+  Snippet Source
+</MDXAppLink>
+.
