@@ -54,6 +54,9 @@
   // State
   --mds-color-hover-emphasize-inactive: var(--mds-palette-gray-500);
   --mds-color-hover-emphasize-active: var(--mds-palette-gray-600);
+
+  // Tag Background
+  --mds-color-tag-blue-bg: #def;
 }
 
 :root.mds-dark {
@@ -89,6 +92,9 @@
   // State
   --mds-color-hover-emphasize-inactive: var(--mds-palette-gray-500);
   --mds-color-hover-emphasize-active: var(--mds-palette-gray-400);
+
+  // Tag Background
+  --mds-color-tag-blue-bg: #6d82a7;
 }
 
 :root.mds-light,
