@@ -6,6 +6,7 @@
   --heading-color: var(--mds-color-text-emphasized);
   --body-color: var(--mds-color-text-normal);
   --figcaption-color: var(--mds-color-text-muted);
+  --border-color: var(--mds-color-border);
   --blockquote-border-color: var(--mds-color-border-light);
   --hr-color: var(--mds-color-border-light);
   --marker-color: var(--mds-color-border-light);
@@ -222,18 +223,13 @@
     height: auto;
   }
 
-  .featured-img {
-    width: 100%;
-    height: 100%;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    filter: brightness(var(--mds-image-brightness));
-  }
-
   .featured-img-container {
     overflow: hidden;
     position: relative;
     margin: 0px auto 48px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    filter: brightness(var(--mds-image-brightness));
   }
 
   /* Video

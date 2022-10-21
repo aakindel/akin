@@ -2,6 +2,7 @@ import { HTMLAttributes } from "react";
 import MDXStyles from "./mdx-prose.module.scss";
 import React from "react";
 import AppLink, { AppLinkProps } from "@/components/AppLink";
+import Image from "next/image";
 
 export const MDXAppLink = (props: AppLinkProps) => {
   const { className } = props;
@@ -13,15 +14,25 @@ export const MDXAppLink = (props: AppLinkProps) => {
 export const MDXFeaturedImage = ({
   src,
   alt,
+  width,
+  height,
 }: {
   src: string;
   alt: string;
+  width: number;
+  height: number;
 }) => {
   return (
+    // https://www.reddit.com/r/nextjs/comments/vhujbf/comment/idbql9r/
     <div className={MDXStyles["featured-img-container"]}>
-      <picture>
-        <img className={MDXStyles["featured-img"]} src={src} alt={alt} />
-      </picture>
+      <Image
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        layout="responsive"
+        objectFit="cover"
+      />
     </div>
   );
 };
