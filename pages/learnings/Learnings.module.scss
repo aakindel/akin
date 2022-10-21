@@ -1,0 +1,22 @@
+.learnings-scope {
+  --page-title-color: var(--mds-color-text-normal);
+  --page-title-hover-color: var(--mds-color-text-muted);
+  --page-subtitle-color: var(--mds-color-text-muted);
+}
+
+.learnings-scope {
+  .page-title {
+    font-size: 20px;
+    line-height: 1.9;
+    font-weight: 600;
+    color: var(--page-title-color);
+    letter-spacing: 0px;
+    margin-bottom: 6px;
+  }
+
+  .page-subtitle {
+    font-size: 15px;
+    color: var(--page-subtitle-color);
+    margin-bottom: 24px;
+  }
+}

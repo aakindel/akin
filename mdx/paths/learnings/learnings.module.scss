@@ -1,0 +1,18 @@
+.general-learnings-scope {
+  --tag-text-color: var(--mds-color-text-normal);
+  --snippet-tag-bg-color: var(--mds-color-tag-blue-bg);
+}
+
+.general-learnings-scope {
+  .learnings-tag {
+    font-size: 12px;
+    color: var(--mds-color-text-normal);
+    line-height: 1.6;
+    padding: 0px 4px;
+    border-radius: 3px;
+  }
+
+  .learnings-tag-snippet {
+    background-color: var(--snippet-tag-bg-color);
+  }
+}
