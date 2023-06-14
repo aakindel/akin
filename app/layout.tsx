@@ -1,5 +1,6 @@
 import "./globals.scss";
 import { Providers } from "./providers";
+import MainNav from "@/components/MainNav";
 import { inter, SFMono } from "../assets/fonts";
 
 export const metadata = {
@@ -15,7 +16,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} ${SFMono.variable} font-sans`}>
-        <Providers>{children}</Providers>
+        <Providers>
+          <MainNav />
+          {children}
+        </Providers>
       </body>
     </html>
   );
