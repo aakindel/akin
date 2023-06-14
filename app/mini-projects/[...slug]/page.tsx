@@ -7,6 +7,7 @@ import Link from "next/link";
 import { format, parseISO } from "date-fns";
 import { Button } from "@/components/Button";
 import ThemedImage from "@/components/ThemedImage";
+import { Metadata } from "next";
 
 interface MiniProjectPageProps {
   params: {
@@ -25,6 +26,64 @@ async function getMiniProjectFromParams(params: { slug: string[] }) {
   }
 
   return miniProject;
+}
+
+export async function generateMetadata({
+  params,
+}: MiniProjectPageProps): Promise<Metadata> {
+  const miniProject = await getMiniProjectFromParams(params);
+
+  if (!miniProject) {
+    return {};
+  }
+
+  // https://stackoverflow.com/a/69032498 : format list with Oxford Comma
+  const formatter = new Intl.ListFormat("en", {
+    style: "long",
+    type: "conjunction",
+  });
+
+  const formattedTechStack = formatter.format(
+    miniProject.techStack.slice(0, 5)
+  );
+
+  return {
+    title: miniProject.title,
+    description: `Built with ${formattedTechStack}.`,
+    authors: [
+      {
+        name: "Ayo Akindele",
+        url: "https://www.ayoakindele.com/",
+      },
+    ],
+    openGraph: {
+      title: miniProject.title,
+      description: `Built with ${formattedTechStack}.`,
+      type: "article",
+      url: `https://www.ayoakindele.com${miniProject.slug}`,
+      images: [
+        {
+          url: `/og.png`,
+          width: 1200,
+          height: 630,
+          alt: miniProject.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: miniProject.title,
+      description: `Built with ${formattedTechStack}.`,
+      images: [
+        {
+          url: `/og.png`,
+          width: 1200,
+          height: 630,
+          alt: miniProject.title,
+        },
+      ],
+    },
+  };
 }
 
 export async function generateStaticParams(): Promise<
