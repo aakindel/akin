@@ -49,7 +49,11 @@ const ThemedImage = ({
       alt={alt}
       width={width}
       height={height}
-      className={cn("h-auto max-w-full", className, imageClassName)}
+      className={cn(
+        "h-auto max-w-full overflow-hidden",
+        className,
+        imageClassName
+      )}
       {...props}
       style={{
         ...style,
@@ -57,7 +61,7 @@ const ThemedImage = ({
     />
   ) : (
     <div
-      className={cn("h-auto max-w-full", className)}
+      className={cn("h-auto max-w-full overflow-hidden", className)}
       style={{
         aspectRatio: `${width}  / ${height}`,
         ...style,
