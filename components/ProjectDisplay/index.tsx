@@ -69,10 +69,10 @@ const ProjectDisplay = ({ project }: ProjectDisplayProps) => {
       </div>
       <div className="relative mt-5 h-48 w-full sm:h-64 sm:flex-1">
         <ThemedImage
-          className="absolute left-[30px] top-0 w-[800px] rounded-lg dark:brightness-[0.9] sm:left-10"
+          className="absolute left-[30px] top-0 w-[800px] overflow-visible rounded-lg dark:brightness-[0.9] sm:left-10"
           imageClassName={`${
             project.shouldAddFeaturedImageShadow
-              ? "shadow-[0_0_rgb(0,0,0),0_0_rgb(0,0,0),0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-2px_rgba(0,0,0,0.1)]"
+              ? "shadow-[0_0_rgb(0,0,0),0_0_rgb(0,0,0),0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-2px_rgba(0,0,0,0.1)] rounded-md"
               : ""
           }`}
           srcLight={project?.featuredImageLight ?? ""}
@@ -81,7 +81,6 @@ const ProjectDisplay = ({ project }: ProjectDisplayProps) => {
           style={{
             maxWidth: "none",
           }}
-          priority
         />
       </div>
     </div>

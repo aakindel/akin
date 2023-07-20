@@ -25,6 +25,14 @@ const miniProjectFields = {
     type: "string",
     required: false,
   },
+  featuredImageLightMicro: {
+    type: "string",
+    required: false,
+  },
+  featuredImageDarkMicro: {
+    type: "string",
+    required: false,
+  },
   figmaLink: {
     type: "string",
     required: false,

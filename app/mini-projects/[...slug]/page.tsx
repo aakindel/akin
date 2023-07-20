@@ -187,10 +187,8 @@ export default async function miniProjectPage({
           </div>
           <ThemedImage
             className="my-6 rounded-md border border-solid border-neutral-200 transition-all duration-75 dark:border-neutral-700"
-            srcLight={miniProject.featuredImageLight ?? ""}
-            srcDark={miniProject.featuredImageDark ?? ""}
+            miniProject={miniProject}
             alt={"mini project screenshot"}
-            priority
           />
           <MDXContent code={miniProject.body.code} />
         </div>
