@@ -14,7 +14,11 @@ const MainNav = () => {
       </div>
       <ul className="flex list-none items-center gap-4 sm:gap-6">
         <li className="block">
-          <Button variant="ghost" className="whitespace-nowrap" asChild>
+          <Button
+            variant="ghost"
+            className="whitespace-nowrap font-normal"
+            asChild
+          >
             <Link href="/mini-projects">Mini Projects</Link>
           </Button>
         </li>

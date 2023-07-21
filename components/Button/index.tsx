@@ -1,4 +1,4 @@
-// adapted from https://github.com/shadcn/ui/blob/main/apps/www/components/ui/button.tsx
+// adapted from https://github.com/shadcn-ui/ui/blob/main/apps/www/registry/default/ui/button.tsx
 
 import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
@@ -6,12 +6,14 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "../../utils";
 
 const buttonVariants = cva(
-  "rounded disabled:opacity-50 disabled:pointer-events-none transition-colors",
+  "inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-400 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-neutral-950 dark:focus-visible:ring-neutral-800",
   {
     variants: {
       variant: {
         default:
           "text-neutral-100 bg-neutral-700 hover:bg-neutral-600 dark:text-neutral-700 dark:bg-neutral-100 dark:hover:bg-neutral-200",
+        outline:
+          "border border-solid border-neutral-200 bg-white shadow-sm hover:bg-neutral-100 hover:text-neutral-900 dark:border-neutral-800 dark:bg-neutral-950 dark:hover:bg-neutral-800 dark:hover:text-neutral-50",
         ghost:
           "text-neutral-500 hover:bg-neutral-100 dark:text-neutral-400 dark:hover:bg-neutral-800",
         emphasis:
