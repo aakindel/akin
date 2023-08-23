@@ -117,10 +117,10 @@ const ThemedImage = ({
           ></img>
         </picture>
       )}
-      <picture className="overflow-hidden">
+      <picture className="block h-full overflow-hidden dark:hidden">
         <img
           className={cn(
-            "relative block h-auto w-full max-w-full overflow-hidden object-cover dark:hidden",
+            "relative block h-full w-full max-w-full overflow-hidden object-cover dark:hidden",
             imageClassName
           )}
           alt={alt}
@@ -136,10 +136,10 @@ const ThemedImage = ({
           ></img>
         </picture>
       )}
-      <picture className="overflow-hidden">
+      <picture className="hidden h-full overflow-hidden dark:block">
         <img
           className={cn(
-            "relative hidden h-auto w-full max-w-full overflow-hidden object-cover dark:block",
+            "relative hidden h-full w-full max-w-full overflow-hidden object-cover dark:block",
             imageClassName
           )}
           alt={alt}
