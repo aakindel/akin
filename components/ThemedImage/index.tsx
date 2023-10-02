@@ -111,7 +111,7 @@ const ThemedImage = ({
       {srcLightMicro && (
         <picture className="overflow-hidden">
           <img
-            className="absolute bottom-0 left-0 right-0 top-0 block h-full w-full overflow-hidden object-cover backdrop-blur-[32px] dark:hidden"
+            className="absolute bottom-0 left-0 right-0 top-0 block h-full w-full overflow-hidden object-fill backdrop-blur-[32px] dark:hidden"
             alt={alt}
             src={srcLightMicro}
           ></img>
@@ -120,7 +120,7 @@ const ThemedImage = ({
       <picture className="block h-full overflow-hidden dark:hidden">
         <img
           className={cn(
-            "relative block h-full w-full max-w-full overflow-hidden object-cover dark:hidden",
+            "relative block h-full w-full max-w-full overflow-hidden object-fill dark:hidden",
             imageClassName
           )}
           alt={alt}
@@ -130,7 +130,7 @@ const ThemedImage = ({
       {srcDarkMicro && (
         <picture className="overflow-hidden">
           <img
-            className="absolute bottom-0 left-0 right-0 top-0 hidden h-full w-full overflow-hidden object-cover backdrop-blur-[32px] dark:block"
+            className="absolute bottom-0 left-0 right-0 top-0 hidden h-full w-full overflow-hidden object-fill backdrop-blur-[32px] dark:block"
             alt={alt}
             src={srcDarkMicro}
           ></img>
@@ -139,7 +139,7 @@ const ThemedImage = ({
       <picture className="hidden h-full overflow-hidden dark:block">
         <img
           className={cn(
-            "relative hidden h-full w-full max-w-full overflow-hidden object-cover dark:block",
+            "relative hidden h-full w-full max-w-full overflow-hidden object-fill dark:block",
             imageClassName
           )}
           alt={alt}
