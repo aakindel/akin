@@ -37,11 +37,11 @@ export default async function MiniProjectsPage() {
               return (
                 <li key={index} className="group/item relative">
                   <Link
-                    className="absolute -bottom-px -top-px left-0 right-0 ml-[-2%] w-[104%] rounded-lg bg-transparent px-[50px] py-0 group-hover/item:bg-neutral-100 group-hover/item:dark:bg-neutral-800"
+                    className="absolute -bottom-px -top-px left-0 right-0 ml-[-2%] w-[104%] rounded-lg bg-transparent px-[50px] py-0 group-hover/item:bg-neutral-100 group-hover/item:dark:bg-neutral-900"
                     href={miniProject.slug}
                   ></Link>
                   <div
-                    className={`pointer-events-none relative flex max-w-full flex-1 items-center justify-between gap-4 border-solid border-b-neutral-100 px-0 py-4 dark:border-b-neutral-800 ${
+                    className={`pointer-events-none relative flex max-w-full flex-1 items-center justify-between gap-4 border-solid border-b-neutral-100 px-0 py-4 dark:border-b-neutral-900 ${
                       (miniProjects.length > 2 &&
                         index === miniProjects.length - 1) ||
                       miniProjects.length === 1
